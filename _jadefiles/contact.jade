@@ -1,0 +1,19 @@
+section.contact
+  h2.contact__title contact <span>us</span>
+  
+  form(action="https://example.net/comment.php" method="post" class="form")
+    h3.form__title contact us form
+    p
+      label(for="form__name") your name
+      input(class="form__item" type="text" name="name" id="form__name" placeholder="your name" required)
+    p
+      label(for="form__email") email address
+      input(class="form__item" type="email" name="email" id="form__email" placeholder="email address" required)
+    p
+      label(for="form__subject") subject
+      input(class="form__item" type="text" name="subject" id="form__subject" placeholder="subject" required)
+    p
+      label(for="form__message") your message
+      textarea(class="form__item" name="message" id="form__message" cols="48" rows="7" required aria-required="true")
+    p  
+      button(class="form__btn" name="submit" type="submit" id="form-submit") submit now
