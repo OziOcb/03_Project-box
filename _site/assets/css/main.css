@@ -1,4 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,400italic);
+@import url("https://fonts.googleapis.com/css?family=Concert+One|PT+Sans|Source+Sans+Pro");
+@font-face {
+  font-family: 'ginevaregular';
+  src: url("../fonts/gineva-regular-webfont.woff2") format("woff2"), url("../fonts/gineva-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -483,7 +489,7 @@ body {
   background: #F6F6F8;
   font-size: 1.6rem;
   line-height: 1.6;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
