@@ -1,10 +1,14 @@
 header.header
-  a.header__logo(href="#" title="Go back to the homepage")
-    h1 Town end boxing academy website
+  a.header__logo-link(href="#" title="Go back to the homepage")
+    //- h1.hide-text Town end boxing academy website
+    img.header__logo(src="{{site.baseurl}}/assets/img/svg/logo.svg")
   
   nav.nav
-    h2 main navigation
-    ul
+    //- h2.hide-text main navigation
+    button.nav__btn(type="button" title="Open menu")
+      span.nav__btn-bars
+    
+    ul.nav__list
       li.nav__item
         a.nav__link(href="#" title="Go back to the homepage") home
       li.nav__item
@@ -17,4 +21,4 @@ header.header
         a.nav__link(href="#" title="Plan your visit width our timetable") timetable
       li.nav__item
         a.nav__link(href="#" title="Give us a call or write us a message") contact
-    button.nav__button(type="button" title="Open menu") hamburger
+    
