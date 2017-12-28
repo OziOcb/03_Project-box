@@ -495,14 +495,28 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 2rem 3rem 1.7rem;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4); }
+  @media (min-width: 57.5em) {
+    .header {
+      padding-right: 0;
+      padding-left: 1rem; } }
+  @media (min-width: 80.0625em) {
+    .header {
+      padding-left: 0; } }
+  .header-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 128rem;
+    margin-left: auto;
+    margin-right: auto; }
   .header__logo-link {
     display: block;
     width: 7.5rem;
@@ -520,14 +534,30 @@ body {
   opacity: 0;
   transition: all .5s;
   pointer-events: none; }
+  @media (min-width: 57.5em) {
+    .nav__list {
+      opacity: 1;
+      pointer-events: all;
+      position: static;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .nav__link {
   display: block;
   padding: 1rem 0;
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: bold;
   background: rgba(0, 0, 0, 0.9);
   color: #ccc; }
+  @media (min-width: 57.5em) {
+    .nav__link {
+      font-size: 2.4rem;
+      background: none;
+      color: #222;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding: 1rem 2rem; } }
   .nav__link:hover, .nav__link:focus {
     color: white;
     background: rgba(0, 0, 0, 0.8); }
@@ -549,6 +579,9 @@ body {
   right: 3.6rem;
   overflow: hidden;
   z-index: 100; }
+  @media (min-width: 57.5em) {
+    .nav__btn {
+      display: none; } }
   .nav__btn-bars {
     display: block;
     height: .5rem;
@@ -586,4 +619,12 @@ body {
   white-space: nowrap;
   overflow: hidden; }
 
-/*# sourceMappingURL=main.css.map */
+.home-wrap {
+  max-width: 128rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
