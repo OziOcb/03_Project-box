@@ -1,15 +1,7 @@
 // ==================== Header ==================== ====================
 .header
-  padding: 2rem 3rem 1.7rem
+  padding: 2rem 0rem 1.7rem
   box-shadow: 0px 0px 10px 3px rgba(0,0,0,.4)
-
-  @media (min-width: 57.5em)
-    padding-right: 0
-    padding-left: 1rem
-
-  // 1281px = 80.0625em
-  @media (min-width: 80.0625em)
-    padding-left: 0
 
   &-wrap
     display: flex
@@ -23,6 +15,15 @@
     display: block
     width: 7.5rem
     height: 7.5rem
+    margin-left: 3rem
+
+    // 720px
+    @media (min-width: 45em)
+      margin-left: 1rem
+
+    // 1281px
+    @media (min-width: 80.0625em)
+      margin-left: 0
 
 // ==================== Header ==================== Navigation ====================
 .nav
@@ -43,7 +44,8 @@
     transition: all .5s
     pointer-events: none
 
-    @media (min-width: 57.5em)
+    // 720px
+    @media (min-width: 45em)
       opacity: 1
       pointer-events: all
       position: static
@@ -57,13 +59,19 @@
     background: rgba(0,0,0,.9)
     color: #ccc
 
-    @media (min-width: 57.5em)
-      font-size: 2.4rem
+    // 720px
+    @media (min-width: 45em)
+      font-size: 1.8rem
       background: none
       color: #222
       font-weight: 400
       text-transform: uppercase
-      padding: 1rem 2rem
+      padding: 1rem 1.4rem
+
+    // 920px
+    @media (min-width: 57.5em)
+      font-size: 2.4rem
+      padding: 1rem 1.8rem
 
 
     &:hover,
@@ -91,7 +99,8 @@
     overflow: hidden
     z-index: 100
 
-    @media (min-width: 57.5em)
+    // 720px
+    @media (min-width: 45em)
       display: none
 
     &-bars
