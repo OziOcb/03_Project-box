@@ -1,0 +1,55 @@
+.hero
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+  height: 39rem
+  background:
+    color: #090909
+    image: url("../img/hero-bg.jpg")
+    size: cover
+    position: 70% center
+    repeat: no-repeat
+
+  // 813px
+  @media (min-width: 50.8125em)
+    height: 77rem
+
+  &__title
+    text-align: center
+    font-size: 2.2rem
+    text-transform: uppercase
+    color: #eee
+    margin-bottom: 6rem
+
+    // 376px
+    @media (min-width: 23.5em)
+      font-size: 2.5rem
+
+    // 813px
+    @media (min-width: 50.8125em)
+      margin-bottom: 4.5rem
+
+  &__arrow
+    display: none
+
+    // 813px
+    @media (min-width: 50.8125em)
+      display: block
+      margin-bottom: 11rem
+
+    &:hover .hero__arrow-svg
+      transform: scale(1.5)
+
+    &-svg
+      height: 4rem
+      transform: scale(1)
+      transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+
+      animation: pulse 3s ease-in-out infinite
+
+    @keyframes pulse
+      0%, 100%
+        transform: translateY(-15%)
+      50%
+        transform: translateY(15%)
