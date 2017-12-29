@@ -487,12 +487,78 @@ body {
 
 body {
   background: #F6F6F8;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   line-height: 1.6;
   font-family: 'PT Sans', sans-serif;
-  color: #2E2D33;
+  color: #9f9a97;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+/* ==========================================================================
+   Helper classes
+   @mixin ========================================================================= */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+.cta {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: #fff2ee;
+  background: #ff7e66;
+  padding: .833333em 1.87em;
+  border: none;
+  margin-bottom: 7rem; }
+  @media (min-width: 50.8125em) {
+    .cta {
+      margin-bottom: 15rem; } }
 
 .header {
   padding: 2rem 0rem 1.7rem;
@@ -504,9 +570,9 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     max-width: 128rem;
     margin-left: auto;
     margin-right: auto; }
@@ -534,7 +600,7 @@ body {
   opacity: 0;
   transition: all .5s;
   pointer-events: none; }
-  @media (min-width: 45em) {
+  @media (min-width: 50.8125em) {
     .nav__list {
       opacity: 1;
       pointer-events: all;
@@ -550,9 +616,9 @@ body {
   font-weight: bold;
   background: rgba(0, 0, 0, 0.9);
   color: #ccc; }
-  @media (min-width: 45em) {
+  @media (min-width: 50.8125em) {
     .nav__link {
-      font-size: 1.8rem;
+      font-size: 2.1rem;
       background: none;
       color: #222;
       font-weight: 400;
@@ -583,7 +649,7 @@ body {
   right: 3.6rem;
   overflow: hidden;
   z-index: 100; }
-  @media (min-width: 45em) {
+  @media (min-width: 50.8125em) {
     .nav__btn {
       display: none; } }
   .nav__btn-bars {
@@ -618,17 +684,268 @@ body {
       background: rgba(0, 0, 0, 0.7);
       top: -.5rem; }
 
-.hide-text {
-  text-indent: 101%;
-  white-space: nowrap;
-  overflow: hidden; }
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 39rem;
+  background-color: #090909;
+  background-image: url("../img/hero-bg.jpg");
+  background-size: cover;
+  background-position: 70% center;
+  background-repeat: no-repeat; }
+  @media (min-width: 50.8125em) {
+    .hero {
+      height: 77rem; } }
+  .hero__title {
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #eee;
+    margin-bottom: 6rem; }
+    @media (min-width: 23.5em) {
+      .hero__title {
+        font-size: 2.5rem; } }
+    @media (min-width: 50.8125em) {
+      .hero__title {
+        margin-bottom: 4.5rem; } }
+  .hero__arrow {
+    display: none; }
+    @media (min-width: 50.8125em) {
+      .hero__arrow {
+        display: block;
+        margin-bottom: 11rem; } }
+    .hero__arrow:hover .hero__arrow-svg {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5); }
+    .hero__arrow-svg {
+      height: 4rem;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      -webkit-animation: pulse 3s ease-in-out infinite;
+              animation: pulse 3s ease-in-out infinite; }
+
+@-webkit-keyframes pulse {
+  0%, 100% {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%); }
+  50% {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%); } }
+
+@keyframes pulse {
+  0%, 100% {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%); }
+  50% {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%); } }
+
+.motto {
+  background: #040824;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 50.8125em) {
+    .motto {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .motto__fig {
+    margin: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+    @media (max-width: 50.75em) {
+      .motto__fig {
+        max-height: 40rem;
+        overflow: hidden; } }
+    .motto__fig-img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: 50% 50%;
+         object-position: 50% 50%; }
+  .motto__wrap {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .motto__title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 6rem;
+    margin-bottom: 8rem; }
+    @media (min-width: 50.8125em) {
+      .motto__title {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        max-width: 55rem; } }
+  .motto__desc {
+    margin-bottom: 8rem; }
+    @media (min-width: 50.8125em) {
+      .motto__desc {
+        margin: 1rem;
+        max-width: 55rem; } }
+
+.coach {
+  background: #333333;
+  position: relative;
+  width: 100vw; }
+  @media (min-width: 50.8125em) {
+    .coach {
+      height: 80rem;
+      background: transparent;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      text-align: left; } }
+  @media (min-width: 50.8125em) {
+    .coach--mirror {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      text-align: right;
+      padding-bottom: 3rem; } }
+  .coach--mirror .coach__text {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .coach__fig {
+    margin: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 40rem; }
+    @media (min-width: 50.8125em) {
+      .coach__fig {
+        position: absolute;
+        height: 80rem;
+        z-index: -1; } }
+    .coach__fig-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: 30% 50%;
+         object-position: 30% 50%; }
+  @media (min-width: 50.8125em) {
+    .coach__text {
+      width: 50vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0rem 0rem 1rem 1rem rgba(0, 0, 0, 0.8);
+      padding: 1rem; } }
+  .coach__name {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 6.2rem;
+    line-height: 1;
+    letter-spacing: .12em;
+    color: #eee;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 7.5rem;
+    margin-bottom: 6rem; }
+    @media (min-width: 50.8125em) {
+      .coach__name {
+        max-width: 48rem;
+        font-size: 7.2rem; } }
+  .coach__desc {
+    margin-bottom: 8rem; }
+    @media (min-width: 50.8125em) {
+      .coach__desc {
+        max-width: 48rem;
+        color: #eee; } }
 
 .home-wrap {
   max-width: 128rem;
   margin-left: auto;
   margin-right: auto; }
 
-.flex {
+.flex--cc {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.common__title {
+  font-size: 4rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 100;
+  text-transform: capitalize;
+  color: #f01b16;
+  margin-top: 7rem;
+  margin-bottom: 5rem; }
+  @media (min-width: 50.8125em) {
+    .common__title {
+      margin-top: 16rem;
+      margin-bottom: 7.5rem; } }
+  .common__title span {
+    font-family: 'ginevaregular', sans-serif;
+    margin-left: .3em; }
+
+@media (max-width: 36em) {
+  .common__title span {
+    margin-left: 0; }
+  .common__title span::before {
+    content: "\A";
+    white-space: pre; } }
+
+.common__desc {
+  color: #9f9a97;
+  max-width: 107rem;
+  margin-bottom: 5rem; }
+  @media (min-width: 50.8125em) {
+    .common__desc {
+      margin-bottom: 8rem; } }
