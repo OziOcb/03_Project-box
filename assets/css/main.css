@@ -843,7 +843,8 @@ body {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      text-align: right; } }
+      text-align: right;
+      padding-bottom: 3rem; } }
   .coach--mirror .coach__text {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -885,6 +886,7 @@ body {
     font-size: 6.2rem;
     line-height: 1;
     letter-spacing: .12em;
+    color: #eee;
     text-transform: capitalize;
     font-weight: 600;
     margin-top: 7.5rem;
