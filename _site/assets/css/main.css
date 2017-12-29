@@ -836,7 +836,18 @@ body {
               align-items: center;
       -webkit-box-pack: end;
           -ms-flex-pack: end;
-              justify-content: flex-end; } }
+              justify-content: flex-end;
+      text-align: left; } }
+  @media (min-width: 50.8125em) {
+    .coach--mirror {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      text-align: right; } }
+  .coach--mirror .coach__text {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   .coach__fig {
     margin: 0;
     -webkit-box-flex: 1;
@@ -854,17 +865,26 @@ body {
       display: block;
       -o-object-fit: cover;
          object-fit: cover;
-      -o-object-position: 20% 50%;
-         object-position: 20% 50%; }
+      -o-object-position: 30% 50%;
+         object-position: 30% 50%; }
   @media (min-width: 50.8125em) {
     .coach__text {
-      width: 50vw; } }
+      width: 50vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0rem 0rem 1rem 1rem rgba(0, 0, 0, 0.8);
+      padding: 1rem; } }
   .coach__name {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 6.2rem;
     line-height: 1;
     letter-spacing: .12em;
-    color: #eee;
     text-transform: capitalize;
     font-weight: 600;
     margin-top: 7.5rem;
@@ -872,15 +892,13 @@ body {
     @media (min-width: 50.8125em) {
       .coach__name {
         max-width: 48rem;
-        font-size: 7.2rem;
-        text-align: left; } }
+        font-size: 7.2rem; } }
   .coach__desc {
     margin-bottom: 8rem; }
     @media (min-width: 50.8125em) {
       .coach__desc {
         max-width: 48rem;
-        color: #eee;
-        text-align: left; } }
+        color: #eee; } }
 
 .home-wrap {
   max-width: 128rem;
