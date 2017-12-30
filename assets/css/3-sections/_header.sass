@@ -10,12 +10,14 @@
     max-width: 128rem
     margin-left: auto
     margin-right: auto
+
   // ==================== Header ==================== Logo ====================
   &__logo-link
     display: block
     width: 7.5rem
     height: 7.5rem
     margin-left: 3rem
+    transition: all .3s
 
     // 720px
     @media (min-width: 45em)
@@ -24,6 +26,16 @@
     // 1281px
     @media (min-width: 80.0625em)
       margin-left: 0
+
+    &:focus
+      @include outline
+        
+      .header__logo
+        transform:  rotate3d(1, 0, 0.5, 360deg)
+
+  &__logo
+    transition: all .6s
+
 
 // ==================== Header ==================== Navigation ====================
 .nav
@@ -43,6 +55,7 @@
     opacity: 0
     transition: all .5s
     pointer-events: none
+    z-index: 99
 
     // 813px
     @media (min-width: 50.8125em)
@@ -96,12 +109,20 @@
     position: fixed
     top: 2.6rem
     right: 3.6rem
-    overflow: hidden
     z-index: 100
 
     // 813px
     @media (min-width: 50.8125em)
       display: none
+
+    &::before
+      content: 'Navigation'
+      font-size: 1.3rem
+      color: rgba(110,110,110,.8)
+      position: absolute
+      top: 105%
+      left: 0
+      right: 0
 
     &-bars
       display: block

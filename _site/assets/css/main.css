@@ -580,13 +580,23 @@ body {
     display: block;
     width: 7.5rem;
     height: 7.5rem;
-    margin-left: 3rem; }
+    margin-left: 3rem;
+    transition: all .3s; }
     @media (min-width: 45em) {
       .header__logo-link {
         margin-left: 1rem; } }
     @media (min-width: 80.0625em) {
       .header__logo-link {
         margin-left: 0; } }
+    .header__logo-link:focus {
+      box-shadow: 0 0 .2rem .2rem #80BCFA, inset 0 0 .1rem .1rem #80BCFA;
+      border-radius: .1rem;
+      padding: .3rem; }
+      .header__logo-link:focus .header__logo {
+        -webkit-transform: rotate3d(1, 0, 0.5, 360deg);
+                transform: rotate3d(1, 0, 0.5, 360deg); }
+  .header__logo {
+    transition: all .6s; }
 
 .nav__list {
   list-style: none;
@@ -599,7 +609,8 @@ body {
   right: 0;
   opacity: 0;
   transition: all .5s;
-  pointer-events: none; }
+  pointer-events: none;
+  z-index: 99; }
   @media (min-width: 50.8125em) {
     .nav__list {
       opacity: 1;
@@ -647,11 +658,18 @@ body {
   position: fixed;
   top: 2.6rem;
   right: 3.6rem;
-  overflow: hidden;
   z-index: 100; }
   @media (min-width: 50.8125em) {
     .nav__btn {
       display: none; } }
+  .nav__btn::before {
+    content: 'Navigation';
+    font-size: 1.3rem;
+    color: rgba(110, 110, 110, 0.8);
+    position: absolute;
+    top: 105%;
+    left: 0;
+    right: 0; }
   .nav__btn-bars {
     display: block;
     height: .5rem;
@@ -725,14 +743,12 @@ body {
       .hero__arrow {
         display: block;
         margin-bottom: 11rem; } }
-    .hero__arrow:hover .hero__arrow-svg {
-      -webkit-transform: scale(1.5);
-              transform: scale(1.5); }
+    .hero__arrow:focus {
+      margin-bottom: calc(11rem - .6rem);
+      box-shadow: 0 0 .2rem .2rem #80BCFA, inset 0 0 .1rem .1rem #80BCFA;
+      border-radius: .1rem;
+      padding: .3rem; }
     .hero__arrow-svg {
-      height: 4rem;
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
       -webkit-animation: pulse 3s ease-in-out infinite;
               animation: pulse 3s ease-in-out infinite; }
 
@@ -949,5 +965,3 @@ body {
   @media (min-width: 50.8125em) {
     .common__desc {
       margin-bottom: 8rem; } }
-
-/*# sourceMappingURL=main.css.map */

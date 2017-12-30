@@ -38,14 +38,13 @@
       display: block
       margin-bottom: 11rem
 
-    &:hover .hero__arrow-svg
-      transform: scale(1.5)
+    &:focus
+      // I subtracted combained thicknes of the outline (.6rem) from margin-bottom (11rem)
+      margin-bottom: calc(11rem - .6rem)
+      @include outline
+
 
     &-svg
-      height: 4rem
-      transform: scale(1)
-      transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55)
-
       animation: pulse 3s ease-in-out infinite
 
     @keyframes pulse
