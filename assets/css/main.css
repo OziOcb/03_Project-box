@@ -924,11 +924,12 @@ body {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  background: #040824; }
+          justify-content: center; }
+  @media (min-width: 50.8125em) {
+    .gallery__row {
+      background: #040824; } }
 
 .gallery__name-square {
-  background: #040824;
   display: none;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -972,6 +973,63 @@ body {
             flex: 2; }
   .photo--visible {
     display: block; }
+    .photo--visible::before, .photo--visible::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      left: 5%;
+      right: 5%;
+      z-index: 1; }
+      @media (min-width: 50.8125em) {
+        .photo--visible::before, .photo--visible::after {
+          display: none !important; } }
+    .photo--visible::before {
+      background: rgba(0, 0, 0, 0.5); }
+    .photo--visible::after {
+      content: 'click to see the gallery';
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 4rem;
+      color: #eee;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: .6em;
+      -webkit-animation: shake 6s ease-in-out infinite;
+              animation: shake 6s ease-in-out infinite; }
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98); }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02); } }
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98); }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02); } }
+      @media (max-width: 36em) {
+        .photo--visible::after {
+          font-size: 3rem; } }
+  .photo--visible .photo__img {
+    -webkit-filter: blur(0.15rem);
+            filter: blur(0.15rem); }
+    @media (min-width: 50.8125em) {
+      .photo--visible .photo__img {
+        -webkit-filter: none;
+                filter: none; } }
   .photo__fig {
     margin: 0; }
   .photo__img {

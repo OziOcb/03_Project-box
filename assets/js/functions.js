@@ -8,6 +8,7 @@ $('.nav__btn').click (function(){
 $(function(){
   lightbox.option({
     'resizeDuration': 500,
-    'wrapAround': true
+    'wrapAround': true,
+    'alwaysShowNavOnTouchDevices': true
   })
 });

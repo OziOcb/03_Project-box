@@ -1,12 +1,15 @@
+// ==================== Gallery ====================  ====================
 .gallery
 
   &__row
     display: flex
     justify-content: center
-    background: #040824
+
+    // 813px
+    @media (min-width: 50.8125em)
+      background: #040824
 
   &__name-square
-    background: #040824
     display: none
     flex: 1
 
@@ -23,7 +26,7 @@
     font-weight: 600
     letter-spacing: .3rem
 
-
+// ==================== Gallery ==================== Photo ====================
 .photo
   display: none
   position: relative
@@ -42,8 +45,56 @@
     max-width: 88rem
     flex: 2
 
+  // ==================== Photo / Text Visible On Mobile ====================
   &--visible
     display: block
+
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      top: 10%
+      bottom: 10%
+      left: 5%
+      right: 5%
+      z-index: 1
+
+      // 813px
+      @media (min-width: 50.8125em)
+        display: none !important
+
+    &::before
+      background: rgba(0,0,0,.5)
+
+    &::after
+      content: 'click to see the gallery'
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 4rem
+      color: #eee
+      text-transform: uppercase
+      font-weight: bold
+      padding: .6em
+      animation: shake 6s ease-in-out infinite
+
+      @keyframes shake
+        0%, 100%
+          transform: scale(.98)
+        50%
+          transform: scale(1.02)
+
+      // 576px
+      @media (max-width: 36em)
+        font-size: 3rem
+
+  // Blur On Mobile
+  &--visible .photo__img
+    filter: blur(.15rem)
+
+    // 813px
+    @media (min-width: 50.8125em)
+      filter: none
 
   &__fig
     margin: 0
@@ -53,6 +104,7 @@
     height: 100%
     display: block
 
+  // ==================== Photo / Banner ====================
   &__banner
     position: absolute
     background: rgba(255,40,36,.4)
