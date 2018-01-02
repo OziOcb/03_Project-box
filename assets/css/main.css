@@ -1057,6 +1057,25 @@ body {
       line-height: 1.2;
       padding: .5em; }
 
+.timetable .common__desc {
+  margin-bottom: 4rem; }
+
+.timetable__wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.timetable__day {
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  font-weight: bold; }
+  .timetable__day:last-child {
+    margin-bottom: 0; }
+
+.timetable__time {
+  text-transform: capitalize;
+  font-weight: normal; }
+
 .home-wrap {
   max-width: 128rem;
   margin-left: auto;
