@@ -1,0 +1,40 @@
+.map
+  margin-top: 5rem
+
+  &__wrap
+    position: relative
+
+  &:hover .map__shade,
+  &:focus .map__shade
+    opacity: 0
+    pointer-events: none
+
+  &__shade
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(0,0,0,.5)
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #eee
+    text-transform: uppercase
+    font-size: 3rem
+    font-weight: bold
+    letter-spacing: .2em
+    padding-top: 2em
+
+    transition: all .3s ease-in-out
+
+
+// Google Maps
+#map
+  background: #444
+  height: 46rem
+  width: 100%
+
+  // 813px
+  @media (min-width: 50.8125em)
+    height: 56rem
