@@ -1235,6 +1235,19 @@ body {
     #map {
       height: 56rem; } }
 
+.footer {
+  margin-top: 6rem; }
+  .footer__logo {
+    width: 6rem;
+    height: 6rem;
+    display: inline-block; }
+    .footer__logo:focus {
+      box-shadow: 0 0 .2rem .2rem #80BCFA, inset 0 0 .1rem .1rem #80BCFA;
+      border-radius: .1rem;
+      padding: .3rem; }
+  .footer__copyright {
+    font-size: 1.4rem; }
+
 .home-wrap {
   max-width: 128rem; }
 
