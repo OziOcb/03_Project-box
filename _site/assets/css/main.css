@@ -578,7 +578,7 @@ body {
     margin-right: auto; }
   .header__logo-link {
     display: block;
-    width: 7.5rem;
+    width: 6.6rem;
     height: 7.5rem;
     margin-left: 3rem;
     transition: all .3s; }
@@ -596,7 +596,9 @@ body {
         -webkit-transform: rotate3d(1, 0, 0.5, 360deg);
                 transform: rotate3d(1, 0, 0.5, 360deg); }
   .header__logo {
-    transition: all .6s; }
+    transition: all .6s;
+    height: 100%;
+    width: 100%; }
 
 .nav__list {
   list-style: none;
@@ -912,7 +914,8 @@ body {
         max-width: 48rem;
         font-size: 7.2rem; } }
   .coach__desc {
-    margin-bottom: 8rem; }
+    padding-bottom: 8rem;
+    margin-bottom: 0; }
     @media (min-width: 50.8125em) {
       .coach__desc {
         max-width: 48rem;
@@ -1076,18 +1079,19 @@ body {
   text-transform: capitalize;
   font-weight: normal; }
 
-.contact {
+.contact__form {
   background-color: #111;
   background-image: url("../img/contact-bg.jpg");
   background-size: cover;
   background-position: 82% center;
   background-repeat: no-repeat; }
-  .contact .common__title {
-    color: #eee;
-    padding-top: 7rem; }
-    .contact .common__title span::before {
-      content: '';
-      margin-left: .3em; }
+
+.contact .common__title {
+  color: #eee;
+  padding-top: 7rem; }
+  .contact .common__title span::before {
+    content: '';
+    margin-left: .3em; }
 
 .form {
   margin-left: 1rem;
@@ -1237,14 +1241,17 @@ body {
 
 .footer {
   margin-top: 6rem; }
-  .footer__logo {
-    width: 6rem;
-    height: 6rem;
+  .footer__logo-link {
+    width: 10.6rem;
+    height: 12rem;
     display: inline-block; }
-    .footer__logo:focus {
+    .footer__logo-link:focus {
       box-shadow: 0 0 .2rem .2rem #80BCFA, inset 0 0 .1rem .1rem #80BCFA;
       border-radius: .1rem;
       padding: .3rem; }
+  .footer__logo {
+    height: 100%;
+    width: 100%; }
   .footer__copyright {
     font-size: 1.4rem; }
 
@@ -1293,5 +1300,3 @@ body {
   @media (min-width: 50.8125em) {
     .common__desc {
       margin-bottom: 8rem; } }
-
-/*# sourceMappingURL=main.css.map */
