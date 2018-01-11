@@ -1,7 +1,16 @@
 // ==================== Header ==================== ====================
 .header
-  padding: 2rem 0rem 1.7rem
-  box-shadow: 0px 0px 10px 3px rgba(0,0,0,.4)
+  padding: .5rem 0rem .5rem
+  box-shadow: 0px 0px 9px rgba(0,0,0,.3)
+
+  // 813px
+  @media (min-width: 50.8125em)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background: #fff
+    z-index: 999
 
   &-wrap
     display: flex
@@ -41,9 +50,6 @@
 
 // ==================== Header ==================== Navigation ====================
 .nav
-  // background: pink
-
-
   // ==================== Navigation List ====================
   &__list
     list-style: none
@@ -81,16 +87,16 @@
       color: #222
       font-weight: 400
       text-transform: uppercase
-      padding: 1rem 1.4rem
+      padding: 1rem 1.4rem .5rem
 
     // 920px
     @media (min-width: 57.5em)
       font-size: 2.4rem
-      padding: 1rem 1.8rem
+      padding: 1rem 1.8rem .5rem
 
 
     &:hover,
-    &:focus
+    &:focus,
       color: lighten(#ccc, 20%)
       background: rgba(0,0,0,.8)
 
