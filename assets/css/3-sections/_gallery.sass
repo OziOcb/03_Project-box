@@ -30,10 +30,15 @@
 .photo
   display: none
   position: relative
+  transition: all .3s ease-in-out
 
   // 813px
   @media (min-width: 50.8125em)
     display: block
+
+    &:hover
+      transform: scale(1.03)
+      z-index: 1
 
   &--square
     max-height: 44rem
@@ -107,7 +112,7 @@
   // ==================== Photo / Banner ====================
   &__banner
     position: absolute
-    background: rgba(255,40,36,.4)
+    background-color: rgba(0,0,0,.75)
     top: 10%
     bottom: 10%
     left: 10%

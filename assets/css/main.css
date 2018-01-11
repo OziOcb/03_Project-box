@@ -958,10 +958,15 @@ body {
 
 .photo {
   display: none;
-  position: relative; }
+  position: relative;
+  transition: all .3s ease-in-out; }
   @media (min-width: 50.8125em) {
     .photo {
-      display: block; } }
+      display: block; }
+      .photo:hover {
+        -webkit-transform: scale(1.03);
+                transform: scale(1.03);
+        z-index: 1; } }
   .photo--square {
     max-height: 44rem;
     max-width: 44rem;
@@ -1041,7 +1046,7 @@ body {
     display: block; }
   .photo__banner {
     position: absolute;
-    background: rgba(255, 40, 36, 0.4);
+    background-color: rgba(0, 0, 0, 0.75);
     top: 10%;
     bottom: 10%;
     left: 10%;
