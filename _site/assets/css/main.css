@@ -555,7 +555,8 @@ body {
   background: #ff7e66;
   padding: .833333em 1.87em;
   border: none;
-  margin-bottom: 7rem; }
+  margin-bottom: 7rem;
+  cursor: pointer; }
   @media (min-width: 50.8125em) {
     .cta {
       margin-bottom: 15rem; } }
@@ -1313,5 +1314,3 @@ body {
   @media (min-width: 50.8125em) {
     .common__desc {
       margin-bottom: 8rem; } }
-
-/*# sourceMappingURL=main.css.map */
