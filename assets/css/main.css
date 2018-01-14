@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Concert+One|PT+Sans|Source+Sans+Pro");
+@import url(2-modules/lightbox.min.css);
+@import url(2-modules/jquery.bxslider.css);
 @font-face {
   font-family: 'ginevaregular';
   src: url("../fonts/gineva-regular-webfont.woff2") format("woff2"), url("../fonts/gineva-regular-webfont.woff") format("woff");
@@ -712,6 +714,18 @@ body {
               transform: rotate(-315deg);
       background: rgba(0, 0, 0, 0.7);
       top: -.5rem; }
+
+.bx-wrapper {
+  border: none; }
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  bottom: 1rem; }
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #eee; }
 
 .hero {
   display: -webkit-box;
