@@ -15,21 +15,46 @@
 
 // ==================== Hero ==================== ====================
 .hero
-  display: flex
-  flex-direction: column
-  justify-content: flex-end
-  align-items: center
   height: 39rem
-  background:
-    color: #090909
-    image: url("../img/hero-bg.jpg")
-    size: cover
-    position: 70% center
-    repeat: no-repeat
+  position: relative
 
   // 813px
   @media (min-width: 50.8125em)
-    height: 77rem
+    margin-top: 5rem
+    height: 71rem
+
+  &__slide
+    height: 39rem
+    width: 100%
+
+    // 813px
+    @media (min-width: 50.8125em)
+      height: 71rem
+
+    &--one
+      background:
+        color: #090909
+        image: url("../img/hero-bg.jpg")
+        size: cover
+        position: 70% center
+        repeat: no-repeat
+
+    &--two
+      background:
+        color: #090909
+        image: url("../img/hero-bg-2.jpg")
+        size: cover
+        position: 80% center
+        repeat: no-repeat
+
+  &__text
+    position: absolute
+    top: 65%
+    left: 0
+    right: 0
+    display: flex
+    flex-direction: column
+    align-items: center
 
   &__title
     text-align: center
