@@ -36,9 +36,14 @@
   @media (min-width: 50.8125em)
     display: block
 
-    &:hover
+    &:hover,
+    &:focus
       transform: scale(1.03)
       z-index: 1
+
+    &:focus
+      @include outline
+      z-index: 9999
 
   &--square
     max-height: 44rem
