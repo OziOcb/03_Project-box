@@ -59,6 +59,9 @@
   &--visible
     display: block
 
+    &:focus
+      @include outline
+
     &::before,
     &::after
       content: ''

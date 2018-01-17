@@ -12,6 +12,22 @@
 .bx-wrapper .bx-pager.bx-default-pager a:focus
   background: #eee
 
+.bx-wrapper .bx-controls-direction a
+  z-index: auto
+
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-next
+  transition: transform .3s ease-in-out
+
+  &:focus
+    @include outline
+
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus,
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus
+  border-radius: 50%
+  transform: scale(1.3)
 
 // ==================== Hero ==================== ====================
 .hero
