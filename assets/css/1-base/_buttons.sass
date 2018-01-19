@@ -4,10 +4,14 @@
   text-transform: uppercase
   color: $btn-text
   background: $btn-bg
-  padding: .833333em 1.87em
+  padding: .5em 1.87em
   border: none
   margin-bottom: 7rem
   cursor: pointer
+
+  &:focus
+    @include outline
+    padding: .5em 1.87em
 
   // 813px
   @media (min-width: 50.8125em)
