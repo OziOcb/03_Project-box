@@ -409,7 +409,7 @@ html {
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #BD5248;
+  color: #f01b16;
   font-weight: bold; }
 
 .gigantic {
@@ -455,21 +455,21 @@ hr {
   height: 0; }
 
 a {
-  color: #BD5248;
+  color: #f01b16;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #d89993; }
+  color: #f67976; }
 
 ::-moz-selection {
-  background: #FFF498; }
+  background: #111; }
 
 ::selection {
-  background: #FFF498; }
+  background: #111; }
 
 ::-moz-selection {
-  background: #FFF498; }
+  background: #111; }
 
 img::-moz-selection {
   background: transparent; }
@@ -481,7 +481,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #FFF498; }
+  -webkit-tap-highlight-color: #111; }
 
 html,
 body {
@@ -572,7 +572,7 @@ body {
       top: 0;
       left: 0;
       right: 0;
-      background: #fff;
+      background: #F6F6F8;
       z-index: 9999; } }
   .header-wrap {
     display: -webkit-box;
@@ -639,12 +639,12 @@ body {
   font-size: 2.7rem;
   font-weight: bold;
   background: rgba(0, 0, 0, 0.9);
-  color: #ccc; }
+  color: #eeeeee; }
   @media (min-width: 50.8125em) {
     .nav__link {
       font-size: 2.1rem;
       background: none;
-      color: #222;
+      color: #524e4b;
       font-weight: 400;
       text-transform: uppercase;
       padding: 1rem 1.4rem .5rem; } }
@@ -792,7 +792,7 @@ body {
     text-align: center;
     font-size: 2.2rem;
     text-transform: uppercase;
-    color: #eee;
+    color: #eeeeee;
     margin-bottom: 6rem; }
     @media (min-width: 23.5em) {
       .hero__title {
@@ -965,7 +965,7 @@ body {
     font-size: 6.2rem;
     line-height: 1;
     letter-spacing: .12em;
-    color: #eee;
+    color: #eeeeee;
     text-transform: capitalize;
     font-weight: 600;
     margin-top: 7.5rem;
@@ -980,7 +980,7 @@ body {
     @media (min-width: 50.8125em) {
       .coach__desc {
         max-width: 48rem;
-        color: #eee; } }
+        color: #eeeeee; } }
 
 .gallery__row {
   display: -webkit-box;
@@ -1128,7 +1128,7 @@ body {
         -ms-flex-align: center;
             align-items: center; }
     .photo__banner-text {
-      color: #fff;
+      color: #eeeeee;
       text-transform: uppercase;
       font-size: 3rem;
       font-weight: bold;
@@ -1162,7 +1162,7 @@ body {
   background-repeat: no-repeat; }
 
 .contact .common__title {
-  color: #eee;
+  color: #eeeeee;
   padding-top: 16rem; }
   .contact .common__title span::before {
     content: '';
@@ -1201,7 +1201,7 @@ body {
           margin-right: 2rem; } }
   .form__input, .form__txt-area {
     background-color: transparent;
-    color: #eee;
+    color: #eeeeee;
     border: .1rem solid #eee;
     text-align: center;
     text-transform: capitalize;
@@ -1210,13 +1210,13 @@ body {
     font-family: 'PT Sans', sans-serif;
     padding: 1.6rem; }
   .form__input::-webkit-input-placeholder, .form__txt-area::-webkit-input-placeholder {
-    color: #aaa; }
+    color: #aeaeae; }
   .form__input::-moz-placeholder, .form__txt-area::-moz-placeholder {
-    color: #aaa; }
+    color: #aeaeae; }
   .form__input:-ms-input-placeholder, .form__txt-area:-ms-input-placeholder {
-    color: #aaa; }
+    color: #aeaeae; }
   .form__input::placeholder, .form__txt-area::placeholder {
-    color: #aaa; }
+    color: #aeaeae; }
   .form__input:focus::-webkit-input-placeholder, .form__txt-area:focus::-webkit-input-placeholder {
     opacity: .5; }
   .form__input:focus::-moz-placeholder, .form__txt-area:focus::-moz-placeholder {
@@ -1373,11 +1373,8 @@ body {
     white-space: pre; } }
 
 .common__desc {
-  color: #9f9a97;
   max-width: 107rem;
   margin-bottom: 5rem; }
   @media (min-width: 50.8125em) {
     .common__desc {
       margin-bottom: 8rem; } }
-
-/*# sourceMappingURL=main.css.map */
