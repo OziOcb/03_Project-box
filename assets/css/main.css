@@ -1,3 +1,6 @@
+/* ==================== ==================== ====================
+ * 0-Tools - Fonts
+ * ==================== ==================== ==================== */
 @import url("https://fonts.googleapis.com/css?family=Concert+One|PT+Sans|Source+Sans+Pro");
 @import url(2-modules/lightbox.min.css);
 @import url(2-modules/jquery.bxslider.css);
@@ -7,6 +10,9 @@
   font-weight: normal;
   font-style: normal; }
 
+/* ==================== ==================== ====================
+ * 0-Tools - Normalize
+ * ==================== ==================== ==================== */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -398,6 +404,9 @@ template {
 [hidden] {
   display: none; }
 
+/* ==================== ==================== ====================
+ * 1-Base - Base
+ * ==================== ==================== ==================== */
 html {
   box-sizing: border-box; }
 
@@ -498,8 +507,8 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 /* ==========================================================================
-   Helper classes
-   @mixin ========================================================================= */
+ * 1-Base - Helper classes
+ * ========================================================================== */
 /*
  * Hide visually and from screen readers
  */
@@ -550,6 +559,9 @@ body {
 .invisible {
   visibility: hidden; }
 
+/* ==================== ==================== ====================
+ * 1-Base - Buttons
+ * ==================== ==================== ==================== */
 .cta {
   font-size: 2.4rem;
   text-transform: uppercase;
@@ -568,6 +580,9 @@ body {
     .cta {
       margin-bottom: 15rem; } }
 
+/* ==================== ==================== ====================
+ * 3-sections - Header
+ * ==================== ==================== ==================== */
 .header {
   padding: .5rem 0rem .5rem;
   box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.3); }
@@ -616,6 +631,9 @@ body {
     height: 100%;
     width: 100%; }
 
+/* ==================== ==================== ====================
+ * 3-sections - Header / Navigation
+ * ==================== ==================== ==================== */
 .nav__list {
   list-style: none;
   padding: 0;
@@ -720,6 +738,9 @@ body {
       background: rgba(0, 0, 0, 0.7);
       top: -.5rem; }
 
+/* ==================== ==================== ====================
+ * 3-sections - Hero / BxSlider
+ * ==================== ==================== ==================== */
 .bx-wrapper {
   border: none; }
 
@@ -753,6 +774,9 @@ body {
   -webkit-transform: scale(1.3);
           transform: scale(1.3); }
 
+/* ==================== ==================== ====================
+ * 3-sections - Hero
+ * ==================== ==================== ==================== */
 .hero {
   height: 39rem;
   position: relative; }
@@ -836,6 +860,9 @@ body {
     -webkit-transform: translateY(15%);
             transform: translateY(15%); } }
 
+/* ==================== ==================== ====================
+ * 3-sections - Motto
+ * ==================== ==================== ==================== */
 .motto {
   background: #040824;
   text-align: center;
@@ -904,6 +931,9 @@ body {
         margin: 1rem;
         max-width: 55rem; } }
 
+/* ==================== ==================== ====================
+ * 3-sections - Staff
+ * ==================== ==================== ==================== */
 .coach {
   background: #333333;
   position: relative;
@@ -987,6 +1017,9 @@ body {
         max-width: 48rem;
         color: #eeeeee; } }
 
+/* ==================== ==================== ====================
+ * 3-sections - Gallery
+ * ==================== ==================== ==================== */
 .gallery__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1022,6 +1055,9 @@ body {
   font-weight: 600;
   letter-spacing: .3rem; }
 
+/* ==================== ==================== ====================
+ * 3-sections - Gallery / Photo
+ * ==================== ==================== ==================== */
 .photo {
   display: none;
   position: relative;
@@ -1140,6 +1176,9 @@ body {
       line-height: 1.2;
       padding: .5em; }
 
+/* ==================== ==================== ====================
+ * 3-sections - Timetable
+ * ==================== ==================== ==================== */
 .timetable .common__desc {
   margin-bottom: 4rem; }
 
@@ -1159,6 +1198,9 @@ body {
   text-transform: capitalize;
   font-weight: normal; }
 
+/* ==================== ==================== ====================
+ * 3-sections - Contact
+ * ==================== ==================== ==================== */
 .contact__form {
   background-color: #111;
   background-image: url("../img/contact-bg.jpg");
@@ -1173,6 +1215,9 @@ body {
     content: '';
     margin-left: .3em; }
 
+/* ==================== ==================== ====================
+ * 3-sections - Contact / Form
+ * ==================== ==================== ==================== */
 .form {
   margin-left: 1rem;
   margin-right: 1rem; }
@@ -1245,6 +1290,9 @@ body {
   .form__btn {
     width: 100%; }
 
+/* ==================== ==================== ====================
+ * 3-sections - Contact / Address
+ * ==================== ==================== ==================== */
 .address__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1293,6 +1341,9 @@ body {
       content: '\A';
       white-space: pre; } }
 
+/* ==================== ==================== ====================
+ * 3-sections - Map
+ * ==================== ==================== ==================== */
 .map {
   margin-top: 5rem; }
   .map__wrap {
@@ -1325,6 +1376,7 @@ body {
     padding-top: 2em;
     transition: all .3s ease-in-out; }
 
+/* Google Maps */
 #map {
   background: #444;
   height: 46rem;
@@ -1333,6 +1385,9 @@ body {
     #map {
       height: 56rem; } }
 
+/* ==================== ==================== ====================
+ * 3-sections - Footer
+ * ==================== ==================== ==================== */
 .footer {
   margin-top: 6rem; }
   .footer__logo-link {
