@@ -107,3 +107,28 @@
     font-style: normal
     text-transform: uppercase
     text-align: left
+
+    // Changes color of the link/phone-number to the base text color.
+    // I don't know why but it's only visible on an actual device,
+    // that difference is invisible on Chrome's Dev Tools
+    a
+      color: $text-color
+
+    // Used because the email address is to long, what causes a problem on mobile widhts.
+    &--small
+      font-size: 1.7rem
+
+      // 384px
+      @media (min-width: 24em)
+        font-size: 2rem
+
+      // 448px
+      @media (min-width: 28em)
+        font-size: 2.4rem
+
+    // Causes line brake at the email address, without useing a <br> tag.
+    // 592px
+    @media (max-width: 37em)
+      span::after
+        content: '\A'
+        white-space: pre
