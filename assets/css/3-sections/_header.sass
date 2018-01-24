@@ -65,17 +65,13 @@
     top: 0
     left: 0
     right: 0
-    opacity: 0
-    transition: all .5s
-    pointer-events: none
     z-index: 99
+    display: none
 
     // 813px
     @media (min-width: 50.8125em)
-      opacity: 1
-      pointer-events: all
       position: static
-      display: flex
+      display: flex !important
 
   &__link
     display: block
@@ -105,10 +101,9 @@
       color: lighten(#ccc, 20%)
       background: rgba(0,0,0,.8)
 
-  &__btn.open + .nav__list
-    opacity: 1
-    pointer-events: all
-
+    &:focus
+      @include outline
+      padding: 1rem
 
   // ==================== Navigation button / Hamburger ====================
   &__btn
@@ -123,6 +118,9 @@
     top: .7rem
     right: 3.6rem
     z-index: 100
+
+    &:hover
+      cursor: pointer
 
     // 813px
     @media (min-width: 50.8125em)

@@ -1,10 +1,46 @@
-// hamburger
-$('.nav__btn').click (function(){
-  $(this).toggleClass('open');
+/* ==================== ==================== ====================
+ * functions - Hamburger
+ * ==================== ==================== ==================== */
+
+
+/* ATTENTION PLEASE!! - Because I haven't learnt much about Js yet, all the code in this section is basically copied from different sources.
+/* Hiding nav when click outside */
+$('html').click(function() {
+   $('.nav__list').hide();
+   $('.nav__btn').removeClass('open');
+});
+
+$('.nav').click(function(event){
+     event.stopPropagation();
+});
+
+/* Opens nav when click on button */
+$('.nav__btn').click(function(event){
+     $('.nav__list').toggle();
+     $(this).toggleClass('open');
+});
+
+/* Hiding nav when click on link */
+$('.nav__link').click(function() {
+   $('.nav__list').hide();
+   $('.nav__btn').removeClass('open');
+});
+
+/* Hiding nav when click on ESC button */
+$( document ).on( 'keydown', function ( e ) {
+    if ( e.keyCode === 27 ) { // ESC
+         $('.nav__list').hide();
+         $('.nav__btn').removeClass('open');
+    }
 });
 
 
-// lightbox
+
+
+
+/* ==================== ==================== ====================
+ * functions - Lightbox
+ * ==================== ==================== ==================== */
 $(function(){
   lightbox.option({
     'resizeDuration': 500,
@@ -53,7 +89,10 @@ $('a[href*="#"]')
   });
 
 
-// bxslider
+
+/* ==================== ==================== ====================
+ * functions - BxSlider
+ * ==================== ==================== ==================== */
 $(document).ready(function(){
     $('.slider').bxSlider();
   });
