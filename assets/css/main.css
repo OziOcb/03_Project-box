@@ -1081,7 +1081,7 @@ body {
         box-shadow: 0 0 .2rem .2rem #80BCFA, inset 0 0 .1rem .1rem #80BCFA;
         border-radius: .1rem;
         padding: .3rem;
-        z-index: 9999; } }
+        z-index: 9998; } }
   .photo--square {
     max-height: 44rem;
     max-width: 44rem;
