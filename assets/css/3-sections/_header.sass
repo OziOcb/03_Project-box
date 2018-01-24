@@ -98,12 +98,15 @@
 
     &:hover,
     &:focus,
+    &:active
       color: lighten(#ccc, 20%)
       background: rgba(0,0,0,.8)
 
     &:focus
-      @include outline
-      padding: 1rem
+      // 812px
+      @media (max-width: 50.75em)
+        @include outline
+        padding: 1rem
 
   // ==================== Navigation button / Hamburger ====================
   &__btn

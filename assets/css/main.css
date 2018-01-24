@@ -671,14 +671,15 @@ body {
     .nav__link {
       font-size: 2.4rem;
       padding: 1rem 1.8rem .5rem; } }
-  .nav__link:hover, .nav__link:focus {
+  .nav__link:hover, .nav__link:focus, .nav__link:active {
     color: white;
     background: rgba(0, 0, 0, 0.8); }
-  .nav__link:focus {
-    box-shadow: 0 0 .2rem .2rem #80BCFA, inset 0 0 .1rem .1rem #80BCFA;
-    border-radius: .1rem;
-    padding: .3rem;
-    padding: 1rem; }
+  @media (max-width: 50.75em) {
+    .nav__link:focus {
+      box-shadow: 0 0 .2rem .2rem #80BCFA, inset 0 0 .1rem .1rem #80BCFA;
+      border-radius: .1rem;
+      padding: .3rem;
+      padding: 1rem; } }
 
 .nav__btn {
   width: 6.5rem;
