@@ -6,10 +6,42 @@
   &__form
     background:
       color: #111
-      image: url("../img/contact-bg.jpg")
+      image: url("../img/bgs/contact-bg/contact-bg_480x895.jpg")
       size: cover
       position: 82% center
       repeat: no-repeat
+
+    /* Media Queries for responsive background image */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      background:
+        image: url("../img/bgs/contact-bg/contact-bg_480x895@2x.jpg")
+
+    // 481px
+    @media (min-width: 30.0625em)
+      background:
+        image: url("../img/bgs/contact-bg/contact-bg_812x895.jpg")
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 30.0625em)
+      background:
+        image: url("../img/bgs/contact-bg/contact-bg_812x895@2x.jpg")
+
+    // 813px
+    @media (min-width: 50.8125em)
+      background:
+        image: url("../img/bgs/contact-bg/contact-bg_1200x855.jpg")
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 50.8125em)
+      background:
+        image: url("../img/bgs/contact-bg/contact-bg_1200x855@2x.jpg")
+
+    // 1201px
+    @media (min-width: 75.0625em)
+      background:
+        image: url("../img/bgs/contact-bg/contact-bg_1451x855.jpg")
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 75.0625em)
+      background:
+        image: url("../img/bgs/contact-bg/contact-bg_1451x855@2x.jpg")
 
   // ==================== Contact / Title ====================
   .common__title
