@@ -54,10 +54,39 @@
     &--one
       background:
         color: #090909
-        image: url("../img/hero-bg.jpg")
+        image: url("../img/bgs/hero-bg-1/hero-bg-1_480x390.jpg")
         size: cover
         position: 70% center
         repeat: no-repeat
+
+      /* Media Queries for responsive background image 1 */
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        background:
+          image: url("../img/bgs/hero-bg-1/hero-bg-1_480x390@2x.jpg")
+
+      @media (min-width: 481px)
+        background:
+          image: url("../img/bgs/hero-bg-1/hero-bg-1_812x390.jpg")
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 481px)
+        background:
+          image: url("../img/bgs/hero-bg-1/hero-bg-1_812x390@2x.jpg")
+
+      @media (min-width: 813px)
+        background:
+          image: url("../img/bgs/hero-bg-1/hero-bg-1_1200x710.jpg")
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 813px)
+        background:
+          image: url("../img/bgs/hero-bg-1/hero-bg-1_1200x710@2x.jpg")
+
+      @media (min-width: 1201px)
+        background:
+          image: url("../img/bgs/hero-bg-1/hero-bg-1_1616x710.jpg")
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 1201px)
+        background:
+          image: url("../img/bgs/hero-bg-1/hero-bg-1_1616x710@2x.jpg")
 
     &--two
       background:
@@ -66,6 +95,35 @@
         size: cover
         position: 80% center
         repeat: no-repeat
+
+      /* Media Queries for responsive background image 2 */
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        background:
+          image: url("../img/bgs/hero-bg-2/hero-bg-2_480x390@2x.jpg")
+
+      @media (min-width: 481px)
+        background:
+          image: url("../img/bgs/hero-bg-2/hero-bg-2_812x390.jpg")
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 481px)
+        background:
+          image: url("../img/bgs/hero-bg-2/hero-bg-2_812x390@2x.jpg")
+
+      @media (min-width: 813px)
+        background:
+          image: url("../img/bgs/hero-bg-2/hero-bg-2_1200x710.jpg")
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 813px)
+        background:
+          image: url("../img/bgs/hero-bg-2/hero-bg-2_1200x710@2x.jpg")
+
+      @media (min-width: 1201px)
+        background:
+          image: url("../img/bgs/hero-bg-2/hero-bg-2_1616x710.jpg")
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 1201px)
+        background:
+          image: url("../img/bgs/hero-bg-2/hero-bg-2_1616x710@2x.jpg")
 
   &__text
     position: absolute
