@@ -800,22 +800,22 @@ body {
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .hero__slide--one {
           background-image: url("../img/bgs/hero-bg-1/hero-bg-1_480x390@2x.jpg"); } }
-      @media (min-width: 481px) {
+      @media (min-width: 30.0625em) {
         .hero__slide--one {
           background-image: url("../img/bgs/hero-bg-1/hero-bg-1_812x390.jpg"); } }
-      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 481px), (min-resolution: 192dpi) and (min-width: 481px) {
+      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 30.0625em), (min-resolution: 192dpi) and (min-width: 30.0625em) {
         .hero__slide--one {
           background-image: url("../img/bgs/hero-bg-1/hero-bg-1_812x390@2x.jpg"); } }
-      @media (min-width: 813px) {
+      @media (min-width: 50.8125em) {
         .hero__slide--one {
           background-image: url("../img/bgs/hero-bg-1/hero-bg-1_1200x710.jpg"); } }
-      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 813px), (min-resolution: 192dpi) and (min-width: 813px) {
+      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 50.8125em), (min-resolution: 192dpi) and (min-width: 50.8125em) {
         .hero__slide--one {
           background-image: url("../img/bgs/hero-bg-1/hero-bg-1_1200x710@2x.jpg"); } }
-      @media (min-width: 1201px) {
+      @media (min-width: 75.0625em) {
         .hero__slide--one {
           background-image: url("../img/bgs/hero-bg-1/hero-bg-1_1616x710.jpg"); } }
-      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1201px), (min-resolution: 192dpi) and (min-width: 1201px) {
+      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 75.0625em), (min-resolution: 192dpi) and (min-width: 75.0625em) {
         .hero__slide--one {
           background-image: url("../img/bgs/hero-bg-1/hero-bg-1_1616x710@2x.jpg"); } }
     .hero__slide--two {
@@ -828,22 +828,22 @@ body {
       @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .hero__slide--two {
           background-image: url("../img/bgs/hero-bg-2/hero-bg-2_480x390@2x.jpg"); } }
-      @media (min-width: 481px) {
+      @media (min-width: 30.0625em) {
         .hero__slide--two {
           background-image: url("../img/bgs/hero-bg-2/hero-bg-2_812x390.jpg"); } }
-      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 481px), (min-resolution: 192dpi) and (min-width: 481px) {
+      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 30.0625em), (min-resolution: 192dpi) and (min-width: 30.0625em) {
         .hero__slide--two {
           background-image: url("../img/bgs/hero-bg-2/hero-bg-2_812x390@2x.jpg"); } }
-      @media (min-width: 813px) {
+      @media (min-width: 50.8125em) {
         .hero__slide--two {
           background-image: url("../img/bgs/hero-bg-2/hero-bg-2_1200x710.jpg"); } }
-      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 813px), (min-resolution: 192dpi) and (min-width: 813px) {
+      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 50.8125em), (min-resolution: 192dpi) and (min-width: 50.8125em) {
         .hero__slide--two {
           background-image: url("../img/bgs/hero-bg-2/hero-bg-2_1200x710@2x.jpg"); } }
-      @media (min-width: 1201px) {
+      @media (min-width: 75.0625em) {
         .hero__slide--two {
           background-image: url("../img/bgs/hero-bg-2/hero-bg-2_1616x710.jpg"); } }
-      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1201px), (min-resolution: 192dpi) and (min-width: 1201px) {
+      @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2) and (min-width: 75.0625em), (min-resolution: 192dpi) and (min-width: 75.0625em) {
         .hero__slide--two {
           background-image: url("../img/bgs/hero-bg-2/hero-bg-2_1616x710@2x.jpg"); } }
   .hero__text {
