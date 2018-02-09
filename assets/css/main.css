@@ -1027,9 +1027,7 @@ body {
       height: 100%;
       display: block;
       -o-object-fit: cover;
-         object-fit: cover;
-      -o-object-position: 30% 50%;
-         object-position: 30% 50%; }
+         object-fit: cover; }
   @media (min-width: 50.8125em) {
     .coach__text {
       width: 50vw;

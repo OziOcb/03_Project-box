@@ -1,7 +1,9 @@
 // ==================== Motto-Section ==================== 
 section.motto
   figure.motto__fig
-    img.motto__fig-img(src="{{site.baseurl}}/assets/img/motto-img.jpg" alt="Daniel Baughpt durring pad work session with one of our youngsters. The picture is taken from the side. The kid is in the middle of throwing his combinatin.")
+    picture
+      source(media="(min-width: 466px)" srcset="{{site.baseurl}}/assets/img/motto/motto-img_large.jpg")
+      img.motto__fig-img(src="{{site.baseurl}}/assets/img/motto/motto-img_small.jpg" alt="Daniel Baughpt durring pad work session with one of our youngsters. The picture is taken from the side. The kid is in the middle of throwing his combinatin.")
 
   .motto__wrap
     h2.motto__title what seems impossible today<br>will soon become your warm-up
