@@ -7,7 +7,12 @@ section.staff.flex--cc#staff
   .staff__wrap
     .coach.coach--mirror
       figure.coach__fig
-        img.coach__fig-img(src="{{site.baseurl}}/assets/img/staff-andrzej-2.jpg" alt="Daniel Baughpt standing in his fighting stance.")
+        picture
+          source(media="(min-width: 75.0625em)" srcset="{{site.baseurl}}/assets/img/staff/danny/danny-bg_1422x800.jpg 1x")
+          source(media="(min-width: 50.8125em)" srcset="{{site.baseurl}}/assets/img/staff/danny/danny-bg_1200x800.jpg 1x")
+          source(media="(min-width: 30.0625em)" srcset="{{site.baseurl}}/assets/img/staff/danny/danny-bg_812x400.jpg 1x")
+          source(srcset="{{site.baseurl}}/assets/img/staff/danny/danny-bg_480x400.jpg 1x")
+          img.coach__fig-img(src="{{site.baseurl}}/assets/img/staff/danny/danny-bg_480x400.jpg" alt="Daniel Baughpt standing in his fighting stance.")
       
       .coach__text  
         h3.coach__name Daniel Baughpt
@@ -15,7 +20,12 @@ section.staff.flex--cc#staff
     
     .coach
       figure.coach__fig
-        img.coach__fig-img(src="{{site.baseurl}}/assets/img/staff-andrzej.jpg" alt="Our coach Andrzej taking selfie right after a good treining session. He is standing at the ring, surrounded by our adepts. They are all smiling.")
+        picture
+          source(media="(min-width: 75.0625em)" srcset="{{site.baseurl}}/assets/img/staff/andrzej/andrzej-bg_1422x800.jpg 1x")
+          source(media="(min-width: 50.8125em)" srcset="{{site.baseurl}}/assets/img/staff/andrzej/andrzej-bg_1200x800.jpg 1x")
+          source(media="(min-width: 30.0625em)" srcset="{{site.baseurl}}/assets/img/staff/andrzej/andrzej-bg_812x400.jpg 1x")
+          source(srcset="{{site.baseurl}}/assets/img/staff/andrzej/andrzej-bg_480x400.jpg 1x")
+          img.coach__fig-img(src="{{site.baseurl}}/assets/img/staff/andrzej/andrzej-bg_480x400.jpg" alt="Our coach Andrzej taking selfie right after a good treining session. He is standing at the ring, surrounded by our adepts. They are all smiling.")
       
       .coach__text  
         h3.coach__name andrzej sledzinski
