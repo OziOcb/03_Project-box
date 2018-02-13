@@ -5,6 +5,8 @@ var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var jade        = require('gulp-jade');
 var sourcemaps  = require('gulp-sourcemaps');
+var uglify      = require('gulp-uglify');
+var pump        = require('pump');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -46,6 +48,7 @@ gulp.task('sass', function () {
     return gulp.src('assets/css/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
+            outputStyle: 'compressed', /* minify CSS */
             includePaths: ['css'],
             onError: browserSync.notify
         }))
@@ -57,9 +60,24 @@ gulp.task('sass', function () {
 });
 
 /**
-* Proba zainkludowania obslugi Jade
-*/
+ * Minify JS
+ */
+ gulp.task('compress', function (cb) {
+   pump([
+         gulp.src('assets/js/uncompress/*.js'),
+         uglify(),
+         gulp.dest('assets/js/compress')
+     ],
+     cb
+   );
+ });
 
+
+
+
+/**
+* Compile Jade files from _jadefiles into _includes (HTML)
+*/
 gulp.task('jade', function(){
    return gulp.src('_jadefiles/*.jade')
     .pipe(jade())
@@ -72,8 +90,9 @@ gulp.task('jade', function(){
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*', 'assets/js/**'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
+    gulp.watch('assets/js/uncompress/**', ['compress']);
 });
 
 /**
