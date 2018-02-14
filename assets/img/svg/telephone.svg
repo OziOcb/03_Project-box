@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41.4" height="56" viewBox="0 0 41.4 56">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-        fill-rule: evenodd;
-        filter: url(#filter);
-      }
-    </style>
-    <filter id="filter" x="1184.44" y="6518.97" width="41.4" height="56" filterUnits="userSpaceOnUse">
-      <feFlood result="flood" flood-color="#fff"/>
-      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
-      <feBlend result="blend" in2="SourceGraphic"/>
-    </filter>
-  </defs>
-  <path id="telephone.svg" class="cls-1" d="M1188.3,6522.36c-2.33,1.72-8.92,11.03,3.41,32.14,13,22.25,25.37,21.33,27.85,19.82l-8.76-14.59c-2.07,1.21-3.82-.77-7.04-5.07-0.06-.03-6.29-10.36-6.31-10.49-1.29-2.77-2.32-5.61-.16-6.87Zm36.61,48.89a1.861,1.861,0,0,0,.66-2.59l0.01-.01-6.85-11.37a1.933,1.933,0,0,0-2.62-.66l-4.19,2.44,8.79,14.63s4.19-2.43,4.19-2.44h0.01Zm-22.28-37.06a1.853,1.853,0,0,0,.67-2.58l0.01-.01s-7.04-11.69-7.05-11.7a1.924,1.924,0,0,0-2.61-.66l-4.2,2.45,8.99,14.95s4.19-2.43,4.19-2.44v-0.01Z" transform="translate(-1184.44 -6518.97)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="41.4" height="56"><defs><filter id="a" x="1184.44" y="6518.97" width="41.4" height="56" filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#fff"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><path d="M1188.3 6522.36c-2.33 1.72-8.92 11.03 3.41 32.14 13 22.25 25.37 21.33 27.85 19.82l-8.76-14.59c-2.07 1.21-3.82-.77-7.04-5.07-.06-.03-6.29-10.36-6.31-10.49-1.29-2.77-2.32-5.61-.16-6.87zm36.61 48.89a1.861 1.861 0 0 0 .66-2.59l.01-.01-6.85-11.37a1.933 1.933 0 0 0-2.62-.66l-4.19 2.44 8.79 14.63s4.19-2.43 4.19-2.44h.01zm-22.28-37.06a1.853 1.853 0 0 0 .67-2.58l.01-.01s-7.04-11.69-7.05-11.7a1.924 1.924 0 0 0-2.61-.66l-4.2 2.45 8.99 14.95s4.19-2.43 4.19-2.44v-.01z" transform="translate(-1184.44 -6518.97)" fill="#fff" fill-rule="evenodd" filter="url(#a)"/></svg>

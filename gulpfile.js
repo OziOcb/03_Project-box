@@ -7,6 +7,7 @@ var jade        = require('gulp-jade');
 var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
 var pump        = require('pump');
+var imagemin    = require('gulp-imagemin');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -84,6 +85,14 @@ gulp.task('jade', function(){
     .pipe(gulp.dest('_includes'));
 });
 
+// Optimizes and copies image files.
+gulp.task('imagemin', function(){
+	gulp.src('assets/img/**/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('assets/img'))
+});
+
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -93,6 +102,7 @@ gulp.task('watch', function () {
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
     gulp.watch('assets/js/uncompress/**', ['compress']);
+    gulp.watch('assets/img/**/*', ['imagemin']);
 });
 
 /**
