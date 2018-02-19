@@ -90,6 +90,7 @@ $('a[href*="#"]')
 /* ==================== ==================== ====================
  * functions - BxSlider
  * ==================== ==================== ==================== */
-$(document).ready(function(){
-    $('.slider').bxSlider();
-  });
+$(window).on('load', function() {
+  $('.hero__slide--two').removeClass('hidden');
+  $('.slider').bxSlider();
+});

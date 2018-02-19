@@ -99,7 +99,7 @@ gulp.task('imagemin', function(){
  */
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*', 'assets/js/compress/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
     gulp.watch('assets/js/uncompress/**', ['compress']);
     gulp.watch('assets/img/**/*', ['imagemin']);
