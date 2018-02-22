@@ -6,7 +6,6 @@
         <title>{{ page.title }}</title>
         <meta name="description" content="The Town End Boxing Academy is committed to promoting healthy choices and alternatives for youth by providing a physical fitness program that is professional, fun, and available to all interested youth in Barnsley.">
         <meta name="viewport" content="width=device-width">
-        <!-- <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"> -->
         <link rel="preload" href="{{ site.baseurl }}/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"></noscript>
 
@@ -15,10 +14,11 @@
           {% include loadCSS.js %}
         </script>
 
+        <!-- Critical CSS -->
         <style>
-          .fullvw { width: 100% }
-
-          /* .address__wrap {display: flex;flex-direction: column;align-items: flex-start;margin-top: 4rem;}.address__item {display: flex;align-items: center;}.address__item:nth-child(2) {margin: 3rem 0;}.address__icon {min-width: 6rem;min-height: 4rem;margin-left: 1rem;margin-right: 3rem;}.address__text {font-style: normal;text-transform: uppercase;text-align: left;}.address__text a {color: #9f9a97;}.address__text--small {font-size: 1.7rem;}@media (min-width: 24em) {.address__text--small {font-size: 2rem;}}@media (min-width: 28em) {.address__text--small {font-size: 2.4rem;}}@media (max-width: 37em) {.address__text span::after {content: '\A';white-space: pre;}} */
+          {% include critical.css %}
+          /* Important CSS code - without the line below the viewport skips on load */
+          @media (max-width: 37em) {.address span::after {content: '\A';white-space: pre;}}
         </style>
 
     </head>

@@ -8,6 +8,7 @@ var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
 var pump        = require('pump');
 var imagemin    = require('gulp-imagemin');
+var critical    = require('critical');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -92,6 +93,38 @@ gulp.task('imagemin', function(){
 		.pipe(gulp.dest('assets/img'))
 });
 
+
+// -----------------------------------------------------------------------------
+// Generate critical-path CSS
+//
+// This task generates a small, minimal amount of your CSS based on which rules
+// are visible (aka "above the fold") during a page load. We will use a Jekyll
+// template command to inline the CSS when the site is generated.
+//
+// All styles should be directly applying to an element visible when your
+// website renders. If the user has to scroll even a small amount, it's not
+// critical CSS.
+// -----------------------------------------------------------------------------
+gulp.task('critical', function (cb) {
+  critical.generate({
+    base: '_site/',
+    src: 'index.html',
+    css: ['assets/css/main.css'],
+    dimensions: [{
+      width: 320,
+      height: 480
+    },{
+      width: 768,
+      height: 1024
+    },{
+      width: 1280,
+      height: 960
+    }],
+    dest: '../_includes/critical.css',
+    minify: true,
+    extract: false
+  });
+});
 
 /**
  * Watch scss files for changes & recompile
