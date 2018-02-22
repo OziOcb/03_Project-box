@@ -6,6 +6,14 @@
         <title>{{ page.title }}</title>
         <meta name="description" content="The Town End Boxing Academy is committed to promoting healthy choices and alternatives for youth by providing a physical fitness program that is professional, fun, and available to all interested youth in Barnsley.">
         <meta name="viewport" content="width=device-width">
+
+        <!-- Critical CSS -->
+        <style>
+          {% include critical.css %}
+          /* Important CSS code - without the line below the viewport skips on load */
+          @media (max-width: 37em) {.address span::after {content: '\A';white-space: pre;}}
+        </style>
+
         <link rel="preload" href="{{ site.baseurl }}/assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"></noscript>
 
@@ -14,12 +22,7 @@
           {% include loadCSS.js %}
         </script>
 
-        <!-- Critical CSS -->
-        <style>
-          {% include critical.css %}
-          /* Important CSS code - without the line below the viewport skips on load */
-          @media (max-width: 37em) {.address span::after {content: '\A';white-space: pre;}}
-        </style>
+
 
     </head>
     <body id="body">
