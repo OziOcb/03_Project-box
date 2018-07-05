@@ -1,0 +1,11 @@
+/* //────  ──────────────────────────────────────────────────────────────────────────────────
+  Art Directory
+//────  ────────────────────────────────────────────────────────────────────────────────── */
+=artDir($path, $break: 1em)
+  @media (min-width: $break)
+    background-image: url('#{$path}.jpg')
+  
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: $break), (min-resolution: 192dpi) and (min-width: $break)
+    background-image: url('#{$path}@2x.jpg')
+
+

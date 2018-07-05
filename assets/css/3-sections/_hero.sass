@@ -54,82 +54,44 @@
     &--one
       background:
         color: #090909
-        image: url("../img/bgs/hero-bg-1/hero-bg-1_480x390.jpg")
         size: cover
         position: 70% center
         repeat: no-repeat
 
       /* Media Queries for responsive background image 1 */
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-        background:
-          image: url("../img/bgs/hero-bg-1/hero-bg-1_480x390@2x.jpg")
+      @include artDir('../img/bgs/hero-bg-1/hero-bg-1_480x390')
 
-      // 481px
-      @media (min-width: 30.0625em)
-        background:
-          image: url("../img/bgs/hero-bg-1/hero-bg-1_812x390.jpg")
+      // // 481px
+      @include artDir('../img/bgs/hero-bg-1/hero-bg-1_812x390', 30.0625em)
 
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 30.0625em)
-        background:
-          image: url("../img/bgs/hero-bg-1/hero-bg-1_812x390@2x.jpg")
+      // // 813px
+      @include artDir('../img/bgs/hero-bg-1/hero-bg-1_1200x710', 50.8125em)
+ 
+      // // 1201px
+      @include artDir('../img/bgs/hero-bg-1/hero-bg-1_1616x710', 75.0625em)
 
-      // 813px
-      @media (min-width: 50.8125em)
-        background:
-          image: url("../img/bgs/hero-bg-1/hero-bg-1_1200x710.jpg")
-
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 50.8125em)
-        background:
-          image: url("../img/bgs/hero-bg-1/hero-bg-1_1200x710@2x.jpg")
-
-      // 1201px
-      @media (min-width: 75.0625em)
-        background:
-          image: url("../img/bgs/hero-bg-1/hero-bg-1_1616x710.jpg")
-
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 75.0625em)
-        background:
-          image: url("../img/bgs/hero-bg-1/hero-bg-1_1616x710@2x.jpg")
 
     &--two
       background:
         color: #090909
-        image: url("../img/bgs/hero-bg-2/hero-bg-2_480x390.jpg")
+        // image: url("../img/bgs/hero-bg-2/hero-bg-2_480x390.jpg")
         size: cover
         position: 80% center
         repeat: no-repeat
 
       /* Media Queries for responsive background image 2 */
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-        background:
-          image: url("../img/bgs/hero-bg-2/hero-bg-2_480x390@2x.jpg")
+      @include artDir('../img/bgs/hero-bg-2/hero-bg-2_480x390')
 
       // 481px
-      @media (min-width: 30.0625em)
-        background:
-          image: url("../img/bgs/hero-bg-2/hero-bg-2_812x390.jpg")
-
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 30.0625em)
-        background:
-          image: url("../img/bgs/hero-bg-2/hero-bg-2_812x390@2x.jpg")
+      @include artDir('../img/bgs/hero-bg-2/hero-bg-2_812x390', 30.0625em)
 
       // 813px
-      @media (min-width: 50.8125em)
-        background:
-          image: url("../img/bgs/hero-bg-2/hero-bg-2_1200x710.jpg")
-
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 50.8125em)
-        background:
-          image: url("../img/bgs/hero-bg-2/hero-bg-2_1200x710@2x.jpg")
+      @include artDir('../img/bgs/hero-bg-2/hero-bg-2_1200x710', 50.8125em)
 
       // 1201px
-      @media (min-width: 75.0625em)
-        background:
-          image: url("../img/bgs/hero-bg-2/hero-bg-2_1616x710.jpg")
+      @include artDir('../img/bgs/hero-bg-2/hero-bg-2_1616x710', 75.0625em)
 
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (min-width: 75.0625em)
-        background:
-          image: url("../img/bgs/hero-bg-2/hero-bg-2_1616x710@2x.jpg")
+
 
   &__text
     position: absolute
